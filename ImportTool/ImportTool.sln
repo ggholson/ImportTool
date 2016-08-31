@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool", "ImportTool\ImportTool.csproj", "{FF9CAC6F-54B8-40B7-BFFA-F700F0470247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool.Core", "ImportTool.Core\ImportTool.Core.csproj", "{DC1980E7-6700-4F8F-979D-BDF8564F27E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{109A8C6E-9F33-4C2F-9410-926A98FC05BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool.Core.Test", "ImportTool.Core.Test\ImportTool.Core.Test.csproj", "{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool.VitalSite", "ImportTool.VitalSite\ImportTool.VitalSite.csproj", "{E63D637B-19CC-414B-BB7F-3243A2228661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool.ModelGeneration", "ImportTool.ModelGeneration\ImportTool.ModelGeneration.csproj", "{B3280913-15AE-49B5-864F-20DD18D1F63E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTool.ModelGeneration.Test", "ImportTool.ModelGeneration.Test\ImportTool.ModelGeneration.Test.csproj", "{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF9CAC6F-54B8-40B7-BFFA-F700F0470247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9CAC6F-54B8-40B7-BFFA-F700F0470247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9CAC6F-54B8-40B7-BFFA-F700F0470247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9CAC6F-54B8-40B7-BFFA-F700F0470247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1980E7-6700-4F8F-979D-BDF8564F27E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1980E7-6700-4F8F-979D-BDF8564F27E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1980E7-6700-4F8F-979D-BDF8564F27E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1980E7-6700-4F8F-979D-BDF8564F27E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63D637B-19CC-414B-BB7F-3243A2228661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63D637B-19CC-414B-BB7F-3243A2228661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63D637B-19CC-414B-BB7F-3243A2228661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63D637B-19CC-414B-BB7F-3243A2228661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3280913-15AE-49B5-864F-20DD18D1F63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3280913-15AE-49B5-864F-20DD18D1F63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3280913-15AE-49B5-864F-20DD18D1F63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3280913-15AE-49B5-864F-20DD18D1F63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CF73BE7-2EC0-44D8-9F3D-4538E5FBA82A} = {109A8C6E-9F33-4C2F-9410-926A98FC05BD}
+		{C2845AB4-D5AB-4ED0-8FF6-CA3012B52E8E} = {109A8C6E-9F33-4C2F-9410-926A98FC05BD}
+	EndGlobalSection
+EndGlobal

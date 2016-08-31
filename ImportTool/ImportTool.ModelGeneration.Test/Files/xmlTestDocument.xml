@@ -1,0 +1,14 @@
+<Doctors>
+	<Doctor>
+		<Id>1</Id>
+	</Doctor>
+	<Doctor>
+		<Id>2</Id>
+	</Doctor>
+	<Doctor>
+		<Id>3</Id>
+	</Doctor>
+		<Doctor>
+		<Id>4</Id>
+	</Doctor>
+</Doctors>

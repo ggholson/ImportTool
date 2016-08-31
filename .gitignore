@@ -1,0 +1,7 @@
+ImportTool/ImportTool.Core.Test/bin/Debug/Files/test-upload-echo-bmg.xml
+**/bin/**
+ImportTool/ImportTool.Core.Test/Files/test-upload-echo-bmg.xml
+**/*.suo
+**/obj/**
+**/test-upload-echo-bmg.xml
+**/*.DotSettings.user
