@@ -133,7 +133,7 @@
                 sourceFile = $"{this.ClassName}.{provider.FileExtension}";
             }
 
-            this.OutputFilePath = this.filePath + sourceFile;
+			this.OutputFilePath = Path.Combine(this.filePath, sourceFile);
 
             // Create a TextWriter to a StreamWriter to the output file.
             using (StreamWriter sw = new StreamWriter(this.OutputFilePath, false))

@@ -3,6 +3,7 @@
     using System;
     using System.CodeDom;
     using System.CodeDom.Compiler;
+	using System.IO;
 
     using Microsoft.CSharp;
 
@@ -18,8 +19,8 @@
             // Add an assembly reference.
             cp.ReferencedAssemblies.AddRange(namesp.GetAssemblyReferences());
 
-            // Set the assembly file name to generate.
-            cp.OutputAssembly = $"{outputPath}{outputAssemblyName}.dll";//RootNamespace;
+			// Set the assembly file name to generate.
+			cp.OutputAssembly = Path.Combine(outputPath, $"{outputAssemblyName}.dll");
 
             // Save the assembly as a physical file.
             cp.GenerateInMemory = false;

@@ -15,7 +15,7 @@
     public class CodeDomClassModelTests
     {
         private readonly string className = "CodeDomTestClass";
-        private readonly string csFilePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Files\\Generated\\";
+		private readonly string csFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "Generated");
         private readonly CodeDomNamespace namesp = new CodeDomNamespace("ImportTool.ModelGeneration.Generated.ClassModelTests");
 
         [OneTimeSetUp]

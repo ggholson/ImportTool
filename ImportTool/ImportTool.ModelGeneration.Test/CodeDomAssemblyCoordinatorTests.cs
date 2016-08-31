@@ -13,7 +13,7 @@
     public class CodeDomAssemblyCoordinatorTests
     {
         private readonly string className = "AssemblyCoordinatorTestClass";
-        private readonly string csFilePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Files\\Generated\\";
+        private readonly string csFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files","Generated");
         private readonly CodeNamespace namesp = new CodeNamespace("ImportTool.ModelGeneration.Generated");
 
         [Test]
@@ -53,7 +53,7 @@
         public void CanCompileMultipleClassesIntoAssembly()
         {
             string propName = "Id";
-            string assemblyName = $"{this.csFilePath}AssemblyCoordinatorTests.dll";
+			string assemblyName = Path.Combine(this.csFilePath, "AssemblyCoordinatorTests.dll");
             string secondaryClassName = "DifferentTestClass";
 
             CodeDomAssemblyCoordinator coordinator = new CodeDomAssemblyCoordinator(this.csFilePath, "AssemblyCoordinatorTests");
