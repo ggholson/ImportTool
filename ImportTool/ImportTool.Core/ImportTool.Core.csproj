@@ -38,19 +38,19 @@
       <HintPath>..\packages\Dapper.SimpleCRUD.1.12.0\lib\net45\Dapper.SimpleCRUD.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\lib\Microsoft.SqlServer.DTSPipelineWrap.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\Microsoft.SqlServer.PipelineHost.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\Microsoft.SqlServer.TxScript.dll</HintPath>
-    </Reference>
+    <!--<Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
+      <!--<SpecificVersion>False</SpecificVersion>-->
+      <!--<EmbedInteropTypes>True</EmbedInteropTypes>-->
+      <!--<HintPath>..\lib\Microsoft.SqlServer.DTSPipelineWrap.dll</HintPath>-->
+    <!--</Reference>-->
+    <!--<Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
+      <!--<SpecificVersion>False</SpecificVersion>-->
+      <!--<HintPath>..\lib\Microsoft.SqlServer.PipelineHost.dll</HintPath>-->
+    <!--</Reference>-->
+    <!--<Reference Include="Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
+      <!--<SpecificVersion>False</SpecificVersion>-->
+      <!--<HintPath>..\lib\Microsoft.SqlServer.TxScript.dll</HintPath>-->
+    <!--</Reference>-->
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

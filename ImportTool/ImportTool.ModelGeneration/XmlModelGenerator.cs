@@ -19,6 +19,6 @@
             XmlNode model = this.xml.DocumentElement.FirstChild;
         }
 
-        private 
+
     }
 }
