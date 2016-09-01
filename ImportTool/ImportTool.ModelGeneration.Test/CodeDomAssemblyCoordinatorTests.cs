@@ -85,7 +85,6 @@
         [Test]
         public void CanAddNamespaceReferenceToAssembledFiles()
         {
-            string assemblyName = $"{this.csFilePath}AssemblyCoordinatorTests.dll";
             string secondaryClassName = "DifferentTestClass";
 
             CodeDomAssemblyCoordinator coordinator = new CodeDomAssemblyCoordinator(this.csFilePath, "AssemblyCoordinatorTests");

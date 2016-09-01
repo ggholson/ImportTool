@@ -16,7 +16,7 @@
         public void CanGenerateModelFromFile()
         {
             XmlModelGenerator gen = new XmlModelGenerator(this.xmlFilePath2);
-            gen.GenerateModel();
+            gen.GetUniqueNodes();
         }
     }
 }
