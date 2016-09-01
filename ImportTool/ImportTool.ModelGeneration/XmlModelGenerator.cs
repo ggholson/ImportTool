@@ -3,22 +3,20 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Xml;
+    using System.Xml.Linq;
 
     public class XmlModelGenerator
     {
-        private XmlDocument xml;
+        private XDocument xmlDoc;
 
         public XmlModelGenerator(string xmlFilePath)
         {
-            this.xml = new XmlDocument();
-            this.xml.Load(xmlFilePath);
+            this.xmlDoc = XDocument.Load(xmlFilePath);
         }
 
         public void GenerateModel()
         {
-            XmlNode model = this.xml.DocumentElement.FirstChild;
+            var uniqueNodes = this.xmlDoc.Root.Elements();
         }
-
-
     }
 }

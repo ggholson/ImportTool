@@ -29,7 +29,7 @@
         public void ClassCanBeCompiledFromCoordinator()
         {
             string propName = "Id";
-            string assemblyName = $"{this.csFilePath}AssemblyCoordinatorTests.dll";
+            string assemblyName = Path.Combine(this.csFilePath, "AssemblyCoordinatorTests.dll");
 
             CodeDomAssemblyCoordinator coordinator = new CodeDomAssemblyCoordinator(this.csFilePath, "AssemblyCoordinatorTests");
             CodeDomClassModel model = coordinator.CreateClassModel(this.className);
@@ -40,7 +40,7 @@
 
             coordinator.CompileCSharpCode();
 
-            Assert.IsTrue(File.Exists($"{this.csFilePath}{this.className}.cs"));
+            Assert.IsTrue(File.Exists(Path.Combine(this.csFilePath, $"{this.className}.cs")));
             Assert.IsTrue(File.Exists(assemblyName));
 
             Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
@@ -67,8 +67,8 @@
 
             coordinator.CompileCSharpCode();
 
-            Assert.IsTrue(File.Exists($"{this.csFilePath}{this.className}.cs"));
-            Assert.IsTrue(File.Exists($"{this.csFilePath}{secondaryClassName}.cs"));
+            Assert.IsTrue(File.Exists(Path.Combine(this.csFilePath, $"{this.className}.cs")));
+            Assert.IsTrue(File.Exists(Path.Combine(this.csFilePath, $"{secondaryClassName}.cs")));
             Assert.IsTrue(File.Exists(assemblyName));
 
             Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
@@ -99,14 +99,14 @@
 
             coordinator.CompileCSharpCode();
 
-            using (StreamReader reader = File.OpenText($"{this.csFilePath}{this.className}.cs"))
+            using (StreamReader reader = File.OpenText(Path.Combine(this.csFilePath, $"{this.className}.cs")))
             {
                 string fileContents = reader.ReadToEnd();
                 Assert.IsTrue(fileContents.Contains("using System;"));
                 Assert.IsTrue(fileContents.Contains("using System.Xml;"));
             }
 
-            using (StreamReader reader2 = File.OpenText($"{this.csFilePath}{secondaryClassName}.cs"))
+            using (StreamReader reader2 = File.OpenText(Path.Combine(this.csFilePath, $"{secondaryClassName}.cs")))
             {
                 string fileContents = reader2.ReadToEnd();
                 Assert.IsTrue(fileContents.Contains("using System;"));

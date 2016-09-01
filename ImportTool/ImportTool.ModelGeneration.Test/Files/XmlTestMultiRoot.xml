@@ -1,0 +1,16 @@
+﻿<RootNode>
+  <ChildNode>
+    <ChildElement>StringContent</ChildElement>
+  </ChildNode>  
+  <ChildNode>
+    <ChildElement>MoreStringContent</ChildElement>
+  </ChildNode>
+  <ChildContainer>
+    <SecondaryChildNode>
+      <SecondaryChildElement>Different String Content</SecondaryChildElement>
+    </SecondaryChildNode>
+    <SecondaryChildNode>
+      <SecondaryChildElement>More Different String Content</SecondaryChildElement>
+    </SecondaryChildNode>
+  </ChildContainer>
+</RootNode>

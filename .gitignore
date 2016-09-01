@@ -5,3 +5,4 @@ ImportTool/ImportTool.Core.Test/Files/test-upload-echo-bmg.xml
 **/obj/**
 **/test-upload-echo-bmg.xml
 **/*.DotSettings.user
+ImportTool/packages/

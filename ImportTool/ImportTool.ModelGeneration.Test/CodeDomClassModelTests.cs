@@ -28,14 +28,18 @@
 
             foreach (var file in Directory.GetFiles(this.csFilePath))
             {
-                File.Delete(file);
+                try
+                {
+                    File.Delete(file);
+                }
+                catch(UnauthorizedAccessException e) { }
             }
         }
 
         [Test]
         public void CanCreateCsFile()
         {
-            string finalFileName = this.csFilePath + className + ".cs";
+            string finalFileName = Path.Combine(this.csFilePath, $"{className}.cs");
 
             CodeDomClassModel generator = new CodeDomClassModel(this.csFilePath, className);
 
@@ -52,7 +56,7 @@
 
             generator.CompileClassFromGeneratedCsFile(this.namesp);
 
-            string assemblyName = this.csFilePath + this.namesp.Name + ".dll";
+            string assemblyName = Path.Combine(this.csFilePath, $"{this.namesp.Name}.dll");
 
             Assert.IsTrue(File.Exists(assemblyName));
         }
@@ -64,7 +68,7 @@
 
             generator.CompileClassFromGeneratedCsFile(this.namesp);
 
-            string assemblyName = this.csFilePath + this.namesp.Name + ".dll";
+            string assemblyName = Path.Combine(this.csFilePath, $"{this.namesp.Name}.dll");
 
             Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
             Type generatedType = generatedAssembly.GetType($"{namesp.Name}.{className}");
@@ -82,7 +86,7 @@
 
             generator.CompileClassFromGeneratedCsFile(this.namesp);
 
-            string assemblyName = this.csFilePath + this.namesp.Name + ".dll";
+            string assemblyName = Path.Combine(this.csFilePath, $"{this.namesp.Name}.dll");
 
             Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
             Type generatedType = generatedAssembly.GetType($"{namesp.Name}.{className}");
@@ -108,7 +112,7 @@
 
             generator.GenerateCCsharpClass(this.namesp);
 
-            using (StreamReader reader = File.OpenText($"{this.csFilePath}ClassAttributeTest.cs"))
+            using (StreamReader reader = File.OpenText(Path.Combine(this.csFilePath, "ClassAttributeTest.cs")))
             {
                 string fileContents = reader.ReadToEnd();
                 Assert.IsTrue(fileContents.Contains("[Serializable()]"));
@@ -117,12 +121,16 @@
 
             generator.CompileClassFromGeneratedCsFile(this.namesp);
             
-            string assemblyName = this.csFilePath + this.namesp.Name + ".dll";
-            
-            Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
-            Type generatedType = generatedAssembly.GetType($"{namesp.Name}.ClassAttributeTest");
+            string assemblyName = Path.Combine(this.csFilePath, $"{this.namesp.Name}.dll");
 
-            Assert.IsNotNull(generatedType);
+            loadAssemblyInSecondaryAppDomain(
+                assemblyName,
+                generatedAssembly =>
+                    {
+                        Type generatedType = generatedAssembly.GetType($"{namesp.Name}.ClassAttributeTest");
+
+                        Assert.IsNotNull(generatedType);
+                    });
         }
 
         [Test]
@@ -141,7 +149,7 @@
 
             generator.GenerateCCsharpClass(this.namesp);
 
-            using (StreamReader reader = File.OpenText($"{this.csFilePath}PropAttributeTest.cs"))
+            using (StreamReader reader = File.OpenText(Path.Combine(this.csFilePath, "PropAttributeTest.cs")))
             {
                 string fileContents = reader.ReadToEnd();
                 Assert.IsTrue(fileContents.Contains("[XmlElement(\"Test\")]"));
@@ -149,12 +157,30 @@
 
             generator.CompileClassFromGeneratedCsFile(this.namesp);
 
-            string assemblyName = this.csFilePath + this.namesp.Name + ".dll";
+            string assemblyName = Path.Combine(this.csFilePath, $"{this.namesp.Name}.dll");
 
-            Assembly generatedAssembly = Assembly.LoadFile(assemblyName);
-            Type generatedType = generatedAssembly.GetType($"{namesp.Name}.PropAttributeTest");
+            loadAssemblyInSecondaryAppDomain(assemblyName,
+                generatedAssembly =>
+                    {
+                        Type generatedType = generatedAssembly.GetType($"{namesp.Name}.PropAttributeTest");
 
-            Assert.IsNotNull(generatedType);
+                        Assert.IsNotNull(generatedType);
+                    });
+        }
+
+        private void loadAssemblyInSecondaryAppDomain(string pathToAssembly, Action<Assembly> testMethod)
+        {
+//            AppDomainSetup setup = new AppDomainSetup();
+//            setup.PrivateBinPath = pathToAssembly;
+//
+//            AppDomain testDomain = AppDomain.CreateDomain("testDomain", AppDomain.CurrentDomain.Evidence, setup);
+//
+//            Assembly generatedAssembly = testDomain.Load(AssemblyName.GetAssemblyName(pathToAssembly));
+            Assembly generatedAssembly = Assembly.LoadFrom(pathToAssembly);
+
+            testMethod(generatedAssembly);
+
+//            AppDomain.Unload(testDomain);
         }
     }
 }
