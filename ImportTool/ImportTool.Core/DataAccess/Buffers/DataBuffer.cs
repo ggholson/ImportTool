@@ -4,7 +4,7 @@
 
     using ImportTool.Core.Contracts.Pipeline;
 
-    public class DataBuffer : IDataBuffer, IDataPipelineElement
+    public class DataBuffer : IDataBuffer
     {
         private IDictionary<string, object> currentRow;
 
@@ -26,11 +26,6 @@
         }
 
         public void Flush()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void SetSource(IDataPipelineSource source)
         {
             throw new System.NotImplementedException();
         }

@@ -51,7 +51,9 @@
     <Compile Include="Models\AttributeModel.cs" />
     <Compile Include="Models\NamespaceAssemblyReference.cs" />
     <Compile Include="Models\NamespaceReference.cs" />
+    <Compile Include="Models\XmlContainerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlElementNameComparer.cs" />
     <Compile Include="XmlModelGenerator.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -39,17 +39,17 @@
       <Private>True</Private>
     </Reference>
     <!--<Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
-      <!--<SpecificVersion>False</SpecificVersion>-->
-      <!--<EmbedInteropTypes>True</EmbedInteropTypes>-->
-      <!--<HintPath>..\lib\Microsoft.SqlServer.DTSPipelineWrap.dll</HintPath>-->
+    <!--<SpecificVersion>False</SpecificVersion>-->
+    <!--<EmbedInteropTypes>True</EmbedInteropTypes>-->
+    <!--<HintPath>..\lib\Microsoft.SqlServer.DTSPipelineWrap.dll</HintPath>-->
     <!--</Reference>-->
     <!--<Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
-      <!--<SpecificVersion>False</SpecificVersion>-->
-      <!--<HintPath>..\lib\Microsoft.SqlServer.PipelineHost.dll</HintPath>-->
+    <!--<SpecificVersion>False</SpecificVersion>-->
+    <!--<HintPath>..\lib\Microsoft.SqlServer.PipelineHost.dll</HintPath>-->
     <!--</Reference>-->
     <!--<Reference Include="Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">-->
-      <!--<SpecificVersion>False</SpecificVersion>-->
-      <!--<HintPath>..\lib\Microsoft.SqlServer.TxScript.dll</HintPath>-->
+    <!--<SpecificVersion>False</SpecificVersion>-->
+    <!--<HintPath>..\lib\Microsoft.SqlServer.TxScript.dll</HintPath>-->
     <!--</Reference>-->
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,9 +69,10 @@
     <Compile Include="Contracts\IDataSource.cs" />
     <Compile Include="Contracts\Pipeline\IDataBuffer.cs" />
     <Compile Include="Contracts\Pipeline\IDataPipelineDestination.cs" />
-    <Compile Include="Contracts\Pipeline\IDataPipelineElement.cs" />
+    <Compile Include="Contracts\Pipeline\IDataPipelineComponent.cs" />
     <Compile Include="Contracts\IImportModel.cs" />
     <Compile Include="Contracts\Pipeline\IDataPipelineSource.cs" />
+    <Compile Include="Contracts\Pipeline\IDataProcessingComponent.cs" />
     <Compile Include="DataAccess\Buffers\DataBuffer.cs" />
     <Compile Include="DataAccess\XmlDataSource.cs" />
     <Compile Include="DataAccess\XmlInMemoryDataSource.cs" />
