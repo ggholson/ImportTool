@@ -3,8 +3,8 @@
     /// <summary>
     /// Defines a class which must be able to accept data from an IDataPipelineSource
     /// </summary>
-    public interface IDataPipelineDestination : IDataPipelineComponent
+    public interface IDataPipelineDestination<in T> : IDataPipelineComponent
     {
-        //void SetSource(IDataPipelineSource source);
+        void PushRow(T row);
     }
 }

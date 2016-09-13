@@ -81,7 +81,6 @@
             this.TeachingOrProfessionalPositions = new CustomDetail("Teaching or Professional Positions", CustomDetailContentStyle.BulletedList);
             this.HonorsAwards = new CustomDetail("Honors, Awards, etc.", CustomDetailContentStyle.BulletedList);
 
-
             this.MedicalSchool = new EducationBackground("Medical School");
             this.Residency = new EducationBackground("Residency");
             this.Fellowship = new EducationBackground("Fellowship");

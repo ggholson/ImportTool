@@ -73,7 +73,7 @@
     <Compile Include="Contracts\IImportModel.cs" />
     <Compile Include="Contracts\Pipeline\IDataPipelineSource.cs" />
     <Compile Include="Contracts\Pipeline\IDataProcessingComponent.cs" />
-    <Compile Include="DataAccess\Buffers\DataBuffer.cs" />
+    <Compile Include="DataAccess\Buffers\GenericDataBuffer.cs" />
     <Compile Include="DataAccess\XmlDataSource.cs" />
     <Compile Include="DataAccess\XmlInMemoryDataSource.cs" />
     <Compile Include="DataAccess\XmlStreamDataSource.cs" />
@@ -84,6 +84,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Components\" />
     <Folder Include="DataAccess\Adapters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

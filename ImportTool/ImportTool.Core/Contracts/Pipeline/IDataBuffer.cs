@@ -1,11 +1,15 @@
 ﻿namespace ImportTool.Core.Contracts.Pipeline
 {
-    public interface IDataBuffer
+    using System.Collections.Generic;
+
+    public interface IDataBuffer<T>
     {
-        object this[string key] { get; set; }
+        bool IsEmpty { get; }
 
-        void AddRow();
+        void PushRow(T row);
 
-        void Flush();
+        T RetrieveNextRow();
+
+        IList<T> Flush();
     }
 }

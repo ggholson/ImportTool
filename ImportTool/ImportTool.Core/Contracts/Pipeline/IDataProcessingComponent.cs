@@ -1,6 +1,6 @@
 ﻿namespace ImportTool.Core.Contracts.Pipeline
 {
-    public interface IDataProcessingComponent : IDataPipelineComponent, IDataPipelineSource, IDataPipelineDestination
+    public interface IDataProcessingComponent<in T> : IDataPipelineComponent, IDataPipelineSource, IDataPipelineDestination<T>
     {
         void BeforeEachRow();
 

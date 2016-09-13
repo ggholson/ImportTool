@@ -49,6 +49,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImportTool.Core\ImportTool.Core.csproj">
+      <Project>{dc1980e7-6700-4f8f-979d-bdf8564f27e3}</Project>
+      <Name>ImportTool.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImportTool.ModelGeneration\ImportTool.ModelGeneration.csproj">
+      <Project>{b3280913-15ae-49b5-864f-20dd18d1f63e}</Project>
+      <Name>ImportTool.ModelGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImportTool.VitalSite\ImportTool.VitalSite.csproj">
+      <Project>{e63d637b-19cc-414b-bb7f-3243a2228661}</Project>
+      <Name>ImportTool.VitalSite</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

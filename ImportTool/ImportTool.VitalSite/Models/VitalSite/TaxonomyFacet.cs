@@ -5,28 +5,19 @@
 
     public class TaxonomyFacet
     {
-        private string facetName;
-        private List<string> terms;
-
         public TaxonomyFacet(string facetName)
         {
             if (string.IsNullOrWhiteSpace(facetName))
             {
-                throw new ArgumentNullException("facetName");
+                throw new ArgumentNullException(nameof(facetName));
             }
 
-            this.facetName = facetName;
-            this.terms = new List<string>();
+            this.FacetName = facetName;
+            this.Terms = new List<string>();
         }
 
-        public string FacetName
-        {
-            get { return this.facetName; }
-        }
+        public string FacetName { get; }
 
-        public List<string> Terms
-        {
-            get { return this.terms; }
-        }
+        public List<string> Terms { get; }
     }
 }

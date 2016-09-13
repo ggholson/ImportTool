@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericDataBufferTests.cs" />
     <Compile Include="Mocks\MockDoctorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlStreamDataSourceTests.cs" />
@@ -59,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <!--<Content Include="Files\test-upload-echo-bmg.xml">-->
-      <!--<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>-->
+    <!--<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>-->
     <!--</Content>-->
     <Content Include="Files\xmlTestDocument.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
