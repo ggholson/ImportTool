@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericDataBufferTests.cs" />
+    <Compile Include="BlockingDataBufferTests.cs" />
     <Compile Include="Mocks\MockDoctorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlStreamDataSourceTests.cs" />
